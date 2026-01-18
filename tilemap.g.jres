@@ -1,0 +1,24 @@
+{
+    "transparency16": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "tilemapTile": true
+    },
+    "Level1": {
+        "id": "Level1",
+        "mimeType": "application/mkcd-tilemap",
+        "data": "MTAwYTAwMDgwMDAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMDAwMDAwMjAyMDAwMDAwMDEwMTAwMDAwMDAyMDIwMDAwMDAwMTAxMDAwMDAxMDEwMTAxMDAwMDAxMDEwMDAwMDEwMTAxMDEwMDAwMDEwMTAwMDAwMTAxMDEwMTAwMDAwMTAxMDAwMDAzMDMwMzAzMDAwMDAxMDEwMTAxMDEwMTAxMDEwMTAxMDEyMjIyMjIyMjIyMDIwMDAwMDAyMDAyMDAwMDAwMjAwMjIwMjIwMjIwMDIyMDIyMDIyMDAyMjAyMjAyMjAwMjAwMDAwMDIwMjIyMjIyMjIyMg==",
+        "tileset": [
+            "myTiles.transparency16",
+            "sprites.dungeon.floorLight0",
+            "sprites.dungeon.greenOuterEast0",
+            "sprites.dungeon.stairWest"
+        ],
+        "displayName": "Level1"
+    },
+    "*": {
+        "mimeType": "image/x-mkcd-f4",
+        "dataEncoding": "base64",
+        "namespace": "myTiles"
+    }
+}
