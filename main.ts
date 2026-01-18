@@ -12,7 +12,7 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     }
 })
 controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
-    for (let index = 0; index < 50; index++) {
+    for (let index = 0; index < 25; index++) {
         mySprite = sprites.create(img`
             7 
             `, SpriteKind.elektron)
@@ -39,8 +39,8 @@ let Ladung = 1000
 BatterieBeschleunigung = -200
 let Rand = 5
 tiles.setCurrentTilemap(tilemap`Level1`)
-// Es werden 100 Elektronen erzeugt und in einer Liste abgespeichert
-for (let index = 0; index < 100; index++) {
+// Es werden 125 Elektronen erzeugt und in einer Liste abgespeichert
+for (let index = 0; index < 125; index++) {
     mySprite = sprites.create(img`
         5 
         `, SpriteKind.elektron)
@@ -80,7 +80,6 @@ game.onUpdate(function () {
             Wert.vy = Widerstand * Wert.vy
         }
     }
-    // Jedes Elektron wird durch alle anderen beschleunigt, und zwar in entgegengesetzte Richtung, in Abhängigkeit vom Abstand
     for (let Wert of list) {
         Wert.ax = 0
         Wert.ay = 0
@@ -92,12 +91,13 @@ game.onUpdate(function () {
                 Wert.ax += BatterieBeschleunigung
             }
         }
+        // Jedes Elektron wird durch alle anderen beschleunigt, und zwar in entgegengesetzte Richtung, in Abhängigkeit vom Abstand
         for (let Wert2 of list) {
             if (Wert != Wert2) {
                 dx = Wert.x - Wert2.x
                 dy = Wert.y - Wert2.y
                 lquadrat = dx * dx + dy * dy
-                if (lquadrat != 0 && 25 > lquadrat) {
+                if (lquadrat != 0 && 400 > lquadrat) {
                     l = Math.sqrt(lquadrat)
                     Wert.ax += Ladung / lquadrat * (dx / l)
                     Wert.ay += Ladung / lquadrat * (dy / l)
